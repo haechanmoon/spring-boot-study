@@ -14,7 +14,7 @@ public class JunitCycleQuiz {
 
     @BeforeEach
     public void BeforeEach(){
-        System.out.println("Hello!");
+        System.out.println("Hello!Giho");
     }
 
     @AfterAll
