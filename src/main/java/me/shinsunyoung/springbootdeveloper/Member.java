@@ -6,10 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED) //기본 생성자
 @AllArgsConstructor
 @Getter
-@Entity
+@Entity //엔터티로 지정
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,4 +17,7 @@ public class Member {
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
+    public void changeName(String name){
+        this.name = name;
+    }
 }
